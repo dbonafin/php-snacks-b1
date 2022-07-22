@@ -14,28 +14,21 @@
     lo stesso numero più di una volta-->
 
     <?php
+        // Create an empty array where to put the random numbers
         $randomNumbers = [];
 
+        // Cycle loop till the number of the elements inside randomNumbers is 15
         while(count($randomNumbers) < 15) {
-            $randomNumber = rand(1, 100);
-
-            echo 'Numero ' . $randomNumber . '<br>';
+            $randomNumber = rand(1, 1000);
+            // Push the random number just in casa the number is not already present
             if(!in_array($randomNumber, $randomNumbers)) {
                 $randomNumbers[] = $randomNumber;
+            } else {
+                $randomNumbers[] = '';
             }
+            // Print the 15 numbers of randomNumbers
+            echo 'Numero ' . $randomNumber . '<br>';
         }
-        var_dump ($randomNumbers);
-
-        // while(count($randomNumbers) < 15) {
-        //     // Generiamo il numero randonm
-        //     $randomNumber = rand(1 ,50);
-        //     // e lo aggiungiamo all'array solo se non è già presente
-        //     if(!in_array($randomNumber, $randomNumbers)) {
-        //         $randomNumbers[] = $randomNumber;
-        //     }
-        //     $i++
-        // } 
-        // echo($randomNumbers);
     ?>
 
 </body>
