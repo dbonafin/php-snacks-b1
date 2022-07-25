@@ -16,9 +16,14 @@
     <?php 
         $myString = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, repellendus? Maiores id perspiciatis. magnam consectetur eveniet alias deserunt voluptas. natus dicta esse consequatur itaque. Perspiciatis non exercitationem dolorem dignissimos nihil!';
 
+        // Separate all the paragraphs between the dots
         $myStringArray = explode('.', $myString);
-        var_dump($myStringArray);
     ?>
+    
+    <!-- For every element in the array print a single paragraph -->
+    <?php for ($i=0; $i < count($myStringArray); $i++) { ?>
+        <p> <?php echo ($myStringArray[$i]);  ?> </p>
+    <?php } ?>
 
 </body>
 </html>
